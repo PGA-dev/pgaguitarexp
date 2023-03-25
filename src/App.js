@@ -41,7 +41,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div style={{ background: '#000000', opacity: '.99' }} >
+    <div style={{ background: '#000000', opacity: '.98' }} >
       <div className='App'>
         <NavHeader />
         <Header />
