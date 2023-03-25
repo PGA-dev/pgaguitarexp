@@ -1,39 +1,612 @@
-.App {
-  text-align: center;
+:root {
+    /*Custom sheet -- colors are simplified for my bootstrap addicted friends*/
+    --info-clr: aqua;
+    --secondary-clr: grey;
+    --danger-clr: magenta;
+    --success-clr: #49fb35;
+    --info-subtle: slateblue;
+    --danger-almost: #a424ff;
+    --body-clr: black;
+    --primary-clr: #09155a;
+    --light-clr: white;
+    --light-2nd: #d8f8f8;
+    --dark-clr: #111115;
+    --border-clr: #20678b;
+    --border-2nd-clr: #3498c2;
+
+    /* Custom colors for gradient color-chase cards -- these might change on and off, or more likely, the main colors in site might change, so must be done separately*/
+    --clr-1: aqua;
+    --clr-2: magenta;
+    --clr-3: #a424ff;
+    --clr-4: #cffbff;
+    --clr-5: slateblue;
+    --clr-6: aqua;
+
+    --border-std: 5px solid #20678b;
+    --text-dec-std: none;
+    --text-dec-line: underline;
+
+    --font-main: papyrus;
+    --font-sec: arial-bold;
+
+    --fw-norm: 300;
+    --fw--normbr: 500;
+    --fw--bright: 700;
+    --fw--bright-wow: 900;
+
+    --fs--heading: 65px;
+    --fs--subhead: 45px;
+    --fs--pagehead: 40px;
+    --fs--text: 24px;
+    --fs-text-hover: 27px;
+    --fs-text-small: 16px;
+    --fs-link: 35px;
+    --fs-link-hover: 37px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body {
+    font-family: var(--font-fam), Arial;
+    color: var(--info-clr)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
+h1 {
+    font-family: var(--font-main);
+    color: var(--info-clr);
+}
+
+
+h2 {
+    color: var(--info-clr);
+    font-family: var(--font-main);
+}
+
+/* Used in SubHead */
+h3 {
+    padding: 2px;
+    font-family: var(--font-main);
+    font-size: var(--fs--subhead);
+    color: var(--info-clr);
+    font-weight: var(--fw--bright)
+}
+
+
+h3:hover{
+    color: var(--light-2nd)
+    
+}
+
+h3::before {
+    background: var(--info-subtle);
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform 950ms ease-in-out;
+    z-index: -1;
+
+}
+
+h3:hover::before {
+    transform: scaley(1);
+    animation: colorback 7500ms infinite;
+}
+
+@keyframes colorback {
+    0% {
+      background-color:  var(--clr-2);
+    }
+    10%{
+        background-color:  var(--clr-3);
+    }
+    25% {
+        background-color:  var(--clr-1);
+    }
+    50% {
+        background-color:  var(--clr-5);
+    }
+    75%{
+        background-color:  var(--clr-1);
+    }
+    90% {
+        background-color:  var(--clr-3);
+    }
+    100% {
+        background-color:  var(--clr-2);
+    }
   }
+
+/* Used for Card Headings */
+h4 {
+    padding: 2px;
+    font-family: var(--font-main);
+    font-size: var(--fs--pagehead);
+    color: var(--danger-almost);
+    font-weight: var(--fw--bright-wow);
+    text-decoration: var(--text-dec-line);
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/*Used in Footer Headings*/
+h5 {
+    color: var(--danger-clr);
+    padding: 5px;
+    font-size: var(--fs--subhead);
+    font-family: var(--font-main);
+    font-weight: var(--fw--normbr);
+    text-decoration: var(--text-dec-line)
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+
+a {
+    color: var(--info-clr);
+    font-size: var(--fs--text);
+    text-decoration: var(--text-dec-std);
+    font-weight: var(--fw--normbr);
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+a:hover {
+    color: var(--danger-almost);
+    font-size: var(--fs-text-hover);
+    text-decoration: var(--text-dec-std);
+    font-weight: var(--fw--bright-wow);
 }
+
+
+p {
+    color: var(--info-subtle);
+    font-size: var(--fs--text);
+    text-decoration: var(--text-dec-std);
+    font-weight: var(--fw--bright);
+    font-family: var(--font-main);
+}
+
+
+/*Buttons*/
+.btn:is(.btn, :visited, :link, :disabled) {
+    display: inline-block;
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-size: var(--fs--text);
+    outline: none;
+    color: var(--info-clr);
+    background-color: var(--primary-clr);
+    border: 5px solid var(--secondary-clr);
+    border-radius: 15px;
+    box-shadow: 0 8px var(--dark-clr);
+}
+
+.btn:is(:hover) {
+    color: var(--danger-clr);
+    background-color: var(--body-clr);
+    border-radius: 15px;
+    font-size: var(--fs-text-hover);
+    box-shadow: 0 3px var(--info-clr);
+}
+
+.btn:is(:active) {
+    background-color: var(--body-clr);
+    color: var(--info-clr);
+    border: 5px solid var(--info-clr);
+    border-radius: 15px;
+    box-shadow: 0 4px rgb(120, 120, 120);
+    box-shadow: 0 5px var(--secondary-clr);
+    transform: translateY(5px);
+    transition-delay: 0.2s;
+}
+
+
+/*card related*/
+/*@property rule lets the value be treated as an angle of the background, not as the rotational position of the card itself*/
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+
+  .card {
+    background-color: var(--body-clr);
+    border-radius: 0.9rem;
+    position: relative;
+}
+  .card::before,
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: -0.7rem;
+    z-index: -1;
+    background: conic-gradient(
+      from var(--gradient-angle),
+      var(--clr-1),
+      var(--clr-2),
+      var(--clr-3),
+      var(--clr-4),
+      var(--clr-5),
+      var(--clr-6),
+      var(--clr-5),
+      var(--clr-4),
+      var(--clr-3),
+      var(--clr-2),
+      var(--clr-1)
+    );
+    border-radius: inherit;
+    animation: rotation 4000ms linear infinite;
+  }
+  
+  .card::after {
+    filter: blur(3.5rem);
+  }
+  
+  @keyframes rotation {
+    0% {
+      --gradient-angle: 0deg;
+    }
+    100% {
+      --gradient-angle: 360deg;
+    }
+  }
+  
+
+/*Carousel Text using blur conic gradient*/
+  h6{
+    font-family: papyrus;
+    font-size: var(--fs--pagehead);
+}
+div>h6{
+    font-size: var(--fs--heading);
+    color: aqua;
+    background-color: var(--body-clr);
+    border-radius: .5rem;
+    position: relative;
+}
+
+div>h6::before, div>h6::after{
+    content: "";
+    position: absolute;
+    inset: -0.1rem;
+    z-index: -1;
+    background: conic-gradient(
+      from var(--gradient-angle),
+      var(--clr-1),
+      var(--clr-2),
+      var(--clr-3),
+      var(--clr-4),
+      var(--clr-5),  
+      var(--clr-6),
+      var(--clr-5),
+      var(--clr-4),
+      var(--clr-3),
+      var(--clr-2),
+      var(--clr-1)
+    );
+    border-radius: inherit;
+    animation: rotation 4000ms linear infinite;
+  }
+
+  div>h6::after {
+    filter: blur(3.5rem);
+  }
+
+.card-title {
+    color: var(--danger-almost);
+    font-weight: var(--fw--bright-wow);
+    font-size: var(--fs--subhead);
+    border: var(--border-clr) ridge 5px;
+    background-color: var(--body-clr);
+}
+
+.card-body {
+    font-family: var(--font-main);
+    color: var(--light-2nd);
+}
+
+.card-text {
+    color: var(--info-clr);
+    text-decoration: var(--text-dec-std);
+}
+
+.card-img-overlay>.card-title {
+    color: var(--danger-clr);
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--body-clr);
+    font-weight: var(--fw--bright-wow);
+    font-size: var(--fs--heading);
+}
+
+.card-img {
+    border: var(--border-clr) ridge 3px;
+    background-color: var(--body-clr);
+}
+
+
+/* General Utilities */
+.row-border {
+    padding: 50px 0;
+    border-bottom: 2px ridge var(--border-2nd-clr);
+    min-height: 200px;
+}
+
+
+/*Entry and exit for opacity and trans values from Spring -- see styles.module.css for more*/
+.page-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.page-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: 300ms ease-out;
+}
+
+.page-exit {
+    opacity: 1;
+}
+
+.page-exit-active {
+    opacity: 0;
+    transition: 300ms ease-in;
+}
+
+/* Footer */
+.site-footer {
+    background-image: radial-gradient(var(--body-clr), var(--primary-clr));
+    padding: 20px 0;
+    margin-top: var(--body-clr) 4rem;
+    border-top: var(--border-2nd-clr) solid;
+    font-family: var(--font-main);
+}
+
+
+/*Heading*/
+#navhead {
+    background-image: radial-gradient(var(--body-clr), var(--primary-clr));
+    border-bottom: var(--border-clr) solid 1px;
+    margin-bottom: 0rem;
+    min-height: 1rem;
+    font-family: var(--font-main);
+}
+
+#headerhead,
+.site-header {
+    background-image: radial-gradient(var(--primary-clr), var(--body-clr));
+    border-bottom: var(--border-clr) solid 2px;
+    margin-bottom: 1rem;
+    padding-top: 4rem;
+    min-height: 15rem;
+    font-family: var(--font-main);
+}
+
+.headstyle {
+    color: var(--info-subtle);
+    padding: 8px;
+    font-size: var(--fs--heading);
+    font-family: var(--font-main)
+}
+
+.headstyle-nav, .headstyle-nav:focus {
+    color: var(--info-clr);
+    padding: 25px;
+    font-size: 48px;
+    font-family: var(--font-main);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.headstyle-nav:hover {
+    color: var(--info-subtle);
+    padding: 27px;
+    font-size: 48px;
+    font-family: var(--font-main);
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.headstyle-nav:active {
+    color: var(--danger-clr);
+    padding: 25px;
+    font-size: 48px;
+    font-family: var(--font-main);
+    font-weight: 700;
+    text-decoration: underline;
+}
+.headstyle-current, .headstyle-current:focus {
+    color: var(--info-subtle);
+    padding: 0px 10px;
+    font-size: 48px;
+    font-family: var(--font-main);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.headstyle-current:hover {
+    color: var(--info-clr);
+    padding: 2px 10px;
+    font-size: 48px;
+    font-family: var(--font-main);
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.headstyle-current:active {
+    color: var(--info-subtle);
+    padding: 25px;
+    font-size: 48px;
+    font-family: var(--font-main);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.headstyle-nav-nobar {
+    border: 0px black;
+}
+
+/*Formik*/
+.label-text {
+    background-color: var(--body-clr);
+    color: var(--info-clr);
+    font-family: var(--font-sec);
+    font-weight: var(--fw--bright);
+    font-size: var(--fs-text-hover);
+    padding: 1px;
+    margin: 1px 5px 5px;
+}
+
+.form-control, .form-control:active, .form-control:focus {
+    background-color: var(--dark-clr);
+    color: var(--info-clr);
+    font-weight: var(--fw--normbr)
+}
+
+.form-control:hover {
+    color: var(--info-clr);
+    font-weight: var(--fw--bright-wow);
+}
+
+.formgroup {
+    background-color: var(--body-clr); 
+    color: var(--info-clr)  
+}
+
+/*Contact Form error message Formik*/
+.error-text {
+    background-color: var(--body-clr);
+    color: var(--danger-clr);
+    padding: 1px;
+    margin: 10px 0px 1px;
+    text-decoration: underline;
+    font-size: var(--fs-text-hover);
+    font-weight: var(--fw--bright);
+}
+
+
+/*carousel*/
+.carousel-control, .carousel-indicators {
+    color: var(--clr-1);
+}
+.carousel-control {
+    color: var(--info-clr);
+    background-color: var(--body-clr);
+    opacity: .1;
+}
+
+
+.carousel-control:focus {
+    color: var(--info-clr);
+    opacity: .1;
+    transition-property: background-color;
+    transition-duration: 2000ms;
+    background-color: var(--body-clr);
+
+}
+
+.carousel-control:hover {
+    color: var(--info-clr);
+    background-color: var(--dark-clr);
+    opacity: 1;
+
+
+}
+
+/*Front Carousel image -- ID because we have many other link>img*/
+#uc {
+    cursor: default;
+    opacity: .97;
+    color: #000;
+    position: relative;
+    text-decoration: none;
+}
+
+#uc:is(:hover, :active,
+    :focus) {
+    cursor: crosshair;
+    opacity: 1;
+    background-color: var(--dark-clr);
+}
+
+
+/* Guide Site Map Links */
+.link-card {
+    margin: 20px;
+    border: 4px solid var(--info-subtle);
+    border-radius: 35px;
+}
+
+.link-anchor,
+.link-anchor:focus {
+    color: var(--info-clr);
+    padding: 15px;
+    margin: 20px;
+    font-size: var(--fs-link);
+    font-family: var(--font-main);
+    font-weight: var(--fw--bright);
+    text-decoration: var(--text-dec-std)
+}
+
+.link-anchor:hover {
+    color: var(--danger-almost);
+    padding: 15px;
+    margin: 20px;
+    font-size: var(--fs-link-hover);
+    font-family: var(--font-main);
+    font-weight: var(--fw--bright-wow);
+    text-decoration: var(--text-dec-std);
+}
+
+/*Site Ref*/
+.siteref-card {
+    margin: 20px;
+    border: 4px solid var(--border-clr);
+    border-radius: 35px;
+}
+
+.siteref-header{
+    color: var(--danger-almost);
+    background-color: var(--body-clr);
+    padding: 15px;
+    margin: 20px;
+    border: 4px solid var(--border-2nd-clr);
+    font-size: var(--fs--pagehead);
+    font-family: var(--font-main);
+    font-weight: var(--fw--bright-wow);
+    text-decoration: var(--text-dec-std);
+}
+
+#siteref-title {
+    color: var(--primary-clr);
+    padding: 15px;
+    margin: 20px;
+    font-size: var(--fs-link);
+    font-family: var(--font-main);
+    font-weight: var(--fw--bright-wow);
+    text-decoration: var(--text-dec-std);
+}
+/*Load and Error messaging*/
+
+.load-style {
+    color:var(--info-clr);
+    padding: 2px;
+    font-size: 24px;
+    font-family: Papyrus;
+}
+
+.error-style {
+    color:var(--info-clr);
+    padding: 2px;
+    font-size: 40px;
+    font-family: Papyrus;
+    text-decoration: none;
+}
+
+.error-head {
+    color: var(--danger-clr);
+    padding: 2px;
+    font-size: 40px;
+    font-family: papyrus;
+}
+
+#spin, .spin-style + .fa-spin {
+    color: var(--danger-clr);
+};

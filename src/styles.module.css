@@ -1,0 +1,32 @@
+.c {
+    position: absolute;
+    max-width: 1050px;
+    max-height: 1000px;
+    width: 1050px;
+    height: 350px;
+    cursor: crosshair;
+    will-change: transform, opacity;
+  }
+  
+  .front,
+  .back {
+    background-size: cover;
+  }
+  
+  .back {
+    /* background-image: url(/src/app/assets/img/p_region_SR5006_OL_00_05.png); */
+    background-image: url(http://localhost:3003/images/guitar.jpg);
+  }
+  
+  .front {
+    /* background-image: url(/src/app/assets/img/guitar.jpg); */
+    background-image: url(http://localhost:3003/images/p_region_RGA622XH_BK_00_01.png);
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+  }
+  
