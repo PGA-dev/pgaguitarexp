@@ -96,7 +96,9 @@ One of the most interesting questions I get asked as a guitar instructor is: "wh
 - Postman for initial data and testing
 ### Data Overview
 - Currently Data is in JSON format, and being fetched from a JSON server, this is the current server/db 
-- the initial goals of the back end re-wire is to create a full crud interaction including adding page material, and deleting page material, on the guitar guide sub-pages. The UI may not fully support this for some time, but the initial endpoints will be supported through Postman.
+- the initial goals of the back end re-wire is to create a full crud interaction including adding page material, and deleting page material, on the guitar guide sub-pages. Initially, the link to the page, including the image and URL, will be the full - CRUD material...this will be updated to the actual sub-page content before live release. 
+- Since the UI won't initially fully support full-CRUD for some time, but the endpoints will be supported through the use of Postman.
+- Postman will also be used for initial testing
 
 ### Node JS Endpoints for CRUD
 - Site Ref **GET**
