@@ -64,6 +64,7 @@ One of the most interesting questions I get asked as a guitar instructor is: "wh
 - GitHub repositories
 - Design -- UX will center on the Neon Sign approach, a visual shock and awe
 
+### Features
 - React.js
     - Redux
         - Global State solution
@@ -93,11 +94,11 @@ One of the most interesting questions I get asked as a guitar instructor is: "wh
 - Express
 - Mongo DB
 - Postman for initial data and testing
-## Data Overview
+### Data Overview
 - Currently Data is in JSON format, and being fetched from a JSON server, this is the current server/db 
 - the initial goals of the back end re-wire is to create a full crud interaction including adding page material, and deleting page material, on the guitar guide sub-pages. The UI may not fully support this for some time, but the initial endpoints will be supported through Postman.
 
-## Node JS Endpoints for CRUD
+### Node JS Endpoints for CRUD
 - Site Ref **GET**
 - Site Map **GET**
 - Guitar ALL Guitar **GET**
@@ -114,13 +115,14 @@ One of the most interesting questions I get asked as a guitar instructor is: "wh
 - Front Carousel **GET**
 - GuitarID **GET**
 
-## Server and Database
+### Server and Database
 - mongo DB
 - Node.js
     - Used for all backend wiring, for the most part
 - Express
     - Used to mirror endpoints highlighted by front end Fetch system
 - Mongoose middleware for modeling
+- HTTP middleware?
 
 
 ## To Do Still
