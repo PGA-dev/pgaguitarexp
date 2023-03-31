@@ -123,7 +123,6 @@ One of the most interesting questions I get asked as a guitar instructor is: "wh
 - Mongoose middleware for modeling
 
 
-
 ## To Do Still
 - Need to add my buyng guide tips
 - Must imbed YouTube, rather than use links
