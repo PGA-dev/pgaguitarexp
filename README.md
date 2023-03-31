@@ -131,7 +131,10 @@ One of the most interesting questions I get asked as a guitar instructor is: "wh
 - Need to add my buyng guide tips
 - Must imbed YouTube, rather than use links
 - Must improve upon the sheer scope of material
-- Still need to add a real database to this, likely postgres, possibly Mongo, but not a fan of noSQL for small applications
+- add mongo instance
+- add express
+- add mongoose
+    - models
 - Updated About and About Guide pages
 ## Market Survey & Research
 

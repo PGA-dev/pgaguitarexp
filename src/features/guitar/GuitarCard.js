@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 //Used in guitar Directory for list
 const GuitarCard = ({ guitar }) => {
     const { id, image, name } = guitar;
-    //padding: '330px 500px 5px 10px'
+
     return (
         <Link to={`${id}`}>
             <Card id='bgcard'>

@@ -54,31 +54,31 @@ export const selectGuitarById = (guitarid) => (state) => {
         (guitar) => guitar.id === parseInt(guitarid));
 };
 
+// Old Material from front Card
+// export const selectFeaturedGuitar1 = (state) => {
+//     return {
+//         frontFeature: state.guitar.guitarArray.find(
+//             (guitar) => guitar.featured === 1),
+//         isLoading: state.guitar.isLoading,
+//         errorMsg: state.guitar.errorMsg
+//     };
+// };
 
-export const selectFeaturedGuitar1 = (state) => {
-    return {
-        frontFeature: state.guitar.guitarArray.find(
-            (guitar) => guitar.featured === 1),
-        isLoading: state.guitar.isLoading,
-        errorMsg: state.guitar.errorMsg
-    };
-};
+// export const selectFeaturedGuitar2 = (state) => {
+//     return {
+//         frontFeature: state.guitar.guitarArray.find(
+//             (guitar) => guitar.featured === 2),
+//         isLoading: state.guitar.isLoading,
+//         errorMsg: state.guitar.errorMsg
+//     };
+// };
 
-export const selectFeaturedGuitar2 = (state) => {
-    return {
-        frontFeature: state.guitar.guitarArray.find(
-            (guitar) => guitar.featured === 2),
-        isLoading: state.guitar.isLoading,
-        errorMsg: state.guitar.errorMsg
-    };
-};
-
-export const selectFeaturedGuitar3 = (state) => {
-    return {
-        frontFeature: state.guitar.guitarArray.find(
-            (guitar) => guitar.featured === 3),
-        isLoading: state.guitar.isLoading,
-        errorMsg: state.guitar.errorMsg
-    };
-};
+// export const selectFeaturedGuitar3 = (state) => {
+//     return {
+//         frontFeature: state.guitar.guitarArray.find(
+//             (guitar) => guitar.featured === 3),
+//         isLoading: state.guitar.isLoading,
+//         errorMsg: state.guitar.errorMsg
+//     };
+// };
 
