@@ -1,11 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { baseUrl } from '../../sitemisc/baseUrl';
+import { monUrl } from '../../sitemisc/monUrl';
 
 
 export const fetchLinks = createAsyncThunk(
     'links/fetchLinks',
     async () => {
-        const response = await fetch(baseUrl + 'links');
+        const response = await fetch(monUrl + 'links');
         if (!response.ok) {
             return Promise.reject('Unable to fetch, status: ' + response.status + response.url);
         }

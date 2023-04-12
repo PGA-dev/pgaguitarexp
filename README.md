@@ -19,7 +19,6 @@
 - These CSS updates were a cool way to learn more about animation and learn more about the @keyframes and @property CSS variable rules
 
 
-
 ## Portfolio Project Perspectives
 One of the most interesting questions I get asked as a guitar instructor is: "what paramaters are relevant to buying a guitar?" The answer, like most issues in life, varies with the needs of the student, or musician asking the question. While most beginner players don't really need a lot of information to get them started, potentially realizing that too much overkill on specifics might end up killing their "enjoyable" new hobby, they do often need solid technical data to inform them and educate them to make future musical decisions and purchases. Advanced, or pro-level players, often need a great deal more information on each instrument, and a way of comparing relevant brands and models for their particular musical needs. For these reasons I have decided to attempt a guide site to all guitar related buying. 
 
@@ -102,20 +101,19 @@ One of the most interesting questions I get asked as a guitar instructor is: "wh
 
 ### Node JS Endpoints for CRUD
 - Site Ref **GET**
-- Site Map **GET**
-- Guitar ALL Guitar **GET**
-- Guitar ALL Guitar **POST**
-- Guitar ALL Guitar **PUT**
-- Guitar ALL Guitar **DELETE**
-- Contact Feedback **POST**
-- Contact Feedback **GET**
-- Guitar Stat **GET**
-- Guitar Stat2 **GET**
-- Guitar Stat3 **GET**
-- Guitar Stat4 **GET**
-- Guitar Stat5 **GET**
-- Front Carousel **GET**
-- GuitarID **GET**
+- Site Map **GET** *postman && front-end ready* **Mongo**
+- Guitar ALL Guitar **GET**  *postman ready--not wired fully*
+- Contact Feedback **PUT**  *postman ready*
+- Contact Feedback **DELETE** *postman ready*
+- Contact Feedback **POST** *postman ready*
+- Contact Feedback **GET**  *postman && front-end ready* **Mongo**
+- Guitar Stat **GET** **JSON-server**
+- Guitar Stat2 **GET**  **JSON-server**
+- Guitar Stat3 **GET** **JSON-server**
+- Guitar Stat4 **GET**  **JSON-server**
+- Guitar Stat5 **GET**  **JSON-server**
+- Front Carousel **GET**  **JSON-server**
+- GuitarID **GET**  **JSON-server**
 
 ### Server and Database
 - mongo DB

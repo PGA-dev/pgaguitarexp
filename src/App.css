@@ -164,7 +164,7 @@ p {
 
 
 /*Buttons*/
-.btn:is(.btn, :visited, :link, :disabled) {
+.button:is(.button, :visited, :link, :disabled) {
     display: inline-block;
     text-decoration: none;
     font-family: var(--font-main);
@@ -177,7 +177,7 @@ p {
     box-shadow: 0 8px var(--dark-clr);
 }
 
-.btn:is(:hover) {
+.button:is(:hover) {
     color: var(--danger-clr);
     background-color: var(--body-clr);
     border-radius: 15px;
@@ -185,20 +185,20 @@ p {
     box-shadow: 0 3px var(--info-clr);
 }
 
-.btn:is(:active) {
+.button:is(.button:active) {
     background-color: var(--body-clr);
     color: var(--info-clr);
     border: 5px solid var(--info-clr);
     border-radius: 15px;
-    box-shadow: 0 4px rgb(120, 120, 120);
-    box-shadow: 0 5px var(--secondary-clr);
+    /*box-shadow: 0 4px rgb(120, 120, 120);*/
+    box-shadow: 0 1px var(--dark-clr);
     transform: translateY(5px);
     transition-delay: 0.2s;
 }
 
 
 /*card related*/
-/*@property rule lets the value be treated as an angle of the background, not as the rotational position of the card itself*/
+/*@property rule is used to allow the value of the gradient be treated as an angle, hence the "<angle>", of the background, not as the rotational position of the card itself*/
 @property --gradient-angle {
     syntax: "<angle>";
     initial-value: 0deg;

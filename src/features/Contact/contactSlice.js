@@ -1,11 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { baseUrl } from '../../sitemisc/baseUrl';
+import { monUrl } from '../../sitemisc/monUrl';
 
 
 export const fetchContact = createAsyncThunk(
     'contact/fetchContact',
     async () => {
-        const response = await fetch(baseUrl + 'contact');
+        const response = await fetch(monUrl + 'contact', {
+            method: 'GET'
+        });
         if (!response.ok) {
             return Promise.reject('Unable to fetch, status: ' + response.status);
         }
@@ -17,13 +20,13 @@ export const fetchContact = createAsyncThunk(
 export const postContact = createAsyncThunk(
     'contact/postContact',
     async (contact, { dispatch }) => {
-        const response = await fetch(baseUrl + 'contact', {
+        const response = await fetch(monUrl + 'contact', {
             method: 'POST',
             body: JSON.stringify(contact),
             headers: { 'Content-Type': 'application/json' }
         });
         if (!response.ok) {
-            return Promise.reject('Unable to fetch, status: ' + response.status);
+            return Promise.reject('Unable to fetch, status: ' + response.status);            
         }
         const data = await response.json();
         dispatch(addContact(data));

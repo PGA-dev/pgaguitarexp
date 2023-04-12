@@ -1,6 +1,7 @@
 //import { GUITARSTAT } from '../../app/shared/GUITARSTAT';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { baseUrl } from '../../sitemisc/baseUrl';
+import { monUrl } from '../../sitemisc/monUrl';
 
 export const fetchGuitarStat = createAsyncThunk(
     'guitarstat/fetchGuitarStat',
