@@ -20,7 +20,7 @@ export const fetchContact = createAsyncThunk(
 export const postContact = createAsyncThunk(
     'contact/postContact',
     async (contact, { dispatch }) => {
-        const response = await fetch(monUrl + 'contact', {
+        const response = await fetch(baseUrl + 'contact', {
             method: 'POST',
             body: JSON.stringify(contact),
             headers: { 'Content-Type': 'application/json' }
