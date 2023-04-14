@@ -454,24 +454,6 @@ div>h6::after {
     border: 0px black;
 }
 
-/* .caret,
-.caret:focus,
-.caret:active,
-.caret:visited {
- color: var(--clr-3)
-}
-.dropdown-toggle.caret,
-.dropdown-toggle:active,
-.dropdown-toggle:visited,
-.dropdown-toggle:link,
-.dropdown-toggle:disabled,
-.dropdown-toggle:focus {
-    color: var(--clr-1);
-}
-
-.dropdown-toggle:hover {
-    color: var(--danger-clr);
-} */
 
 /*Formik*/
 .label-text {
