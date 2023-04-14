@@ -72,9 +72,8 @@ h3 {
 }
 
 
-h3:hover{
+h3:hover {
     color: var(--light-2nd)
-    
 }
 
 h3::before {
@@ -96,27 +95,33 @@ h3:hover::before {
 
 @keyframes colorback {
     0% {
-      background-color:  var(--clr-2);
+        background-color: var(--clr-2);
     }
-    10%{
-        background-color:  var(--clr-3);
+
+    10% {
+        background-color: var(--clr-3);
     }
+
     25% {
-        background-color:  var(--clr-1);
+        background-color: var(--clr-1);
     }
+
     50% {
-        background-color:  var(--clr-5);
+        background-color: var(--clr-5);
     }
-    75%{
-        background-color:  var(--clr-1);
+
+    75% {
+        background-color: var(--clr-1);
     }
+
     90% {
-        background-color:  var(--clr-3);
+        background-color: var(--clr-3);
     }
+
     100% {
-        background-color:  var(--clr-2);
+        background-color: var(--clr-2);
     }
-  }
+}
 
 /* Used for Card Headings */
 h4 {
@@ -203,58 +208,59 @@ p {
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
-  }
+}
 
 
-  .card {
+.card {
     background-color: var(--body-clr);
     border-radius: 0.9rem;
     position: relative;
 }
-  .card::before,
-  .card::after {
+
+.card::before,
+.card::after {
     content: "";
     position: absolute;
     inset: -0.7rem;
     z-index: -1;
-    background: conic-gradient(
-      from var(--gradient-angle),
-      var(--clr-1),
-      var(--clr-2),
-      var(--clr-3),
-      var(--clr-4),
-      var(--clr-5),
-      var(--clr-6),
-      var(--clr-5),
-      var(--clr-4),
-      var(--clr-3),
-      var(--clr-2),
-      var(--clr-1)
-    );
+    background: conic-gradient(from var(--gradient-angle),
+            var(--clr-1),
+            var(--clr-2),
+            var(--clr-3),
+            var(--clr-4),
+            var(--clr-5),
+            var(--clr-6),
+            var(--clr-5),
+            var(--clr-4),
+            var(--clr-3),
+            var(--clr-2),
+            var(--clr-1));
     border-radius: inherit;
     animation: rotation 4000ms linear infinite;
-  }
-  
-  .card::after {
+}
+
+.card::after {
     filter: blur(3.5rem);
-  }
-  
-  @keyframes rotation {
+}
+
+@keyframes rotation {
     0% {
-      --gradient-angle: 0deg;
+        --gradient-angle: 0deg;
     }
+
     100% {
-      --gradient-angle: 360deg;
+        --gradient-angle: 360deg;
     }
-  }
-  
+}
+
 
 /*Carousel Text using blur conic gradient*/
-  h6{
+h6 {
     font-family: papyrus;
     font-size: var(--fs--pagehead);
 }
-div>h6{
+
+div>h6 {
     font-size: var(--fs--heading);
     color: aqua;
     background-color: var(--body-clr);
@@ -262,32 +268,31 @@ div>h6{
     position: relative;
 }
 
-div>h6::before, div>h6::after{
+div>h6::before,
+div>h6::after {
     content: "";
     position: absolute;
     inset: -0.1rem;
     z-index: -1;
-    background: conic-gradient(
-      from var(--gradient-angle),
-      var(--clr-1),
-      var(--clr-2),
-      var(--clr-3),
-      var(--clr-4),
-      var(--clr-5),  
-      var(--clr-6),
-      var(--clr-5),
-      var(--clr-4),
-      var(--clr-3),
-      var(--clr-2),
-      var(--clr-1)
-    );
+    background: conic-gradient(from var(--gradient-angle),
+            var(--clr-1),
+            var(--clr-2),
+            var(--clr-3),
+            var(--clr-4),
+            var(--clr-5),
+            var(--clr-6),
+            var(--clr-5),
+            var(--clr-4),
+            var(--clr-3),
+            var(--clr-2),
+            var(--clr-1));
     border-radius: inherit;
     animation: rotation 4000ms linear infinite;
-  }
+}
 
-  div>h6::after {
+div>h6::after {
     filter: blur(3.5rem);
-  }
+}
 
 .card-title {
     color: var(--danger-almost);
@@ -369,6 +374,9 @@ div>h6::before, div>h6::after{
     font-family: var(--font-main);
 }
 
+
+
+
 #headerhead,
 .site-header {
     background-image: radial-gradient(var(--primary-clr), var(--body-clr));
@@ -386,7 +394,8 @@ div>h6::before, div>h6::after{
     font-family: var(--font-main)
 }
 
-.headstyle-nav, .headstyle-nav:focus {
+.headstyle-nav,
+.headstyle-nav:focus {
     color: var(--info-clr);
     padding: 25px;
     font-size: 48px;
@@ -412,7 +421,9 @@ div>h6::before, div>h6::after{
     font-weight: 700;
     text-decoration: underline;
 }
-.headstyle-current, .headstyle-current:focus {
+
+.headstyle-current,
+.headstyle-current:focus {
     color: var(--info-subtle);
     padding: 0px 10px;
     font-size: 48px;
@@ -443,6 +454,25 @@ div>h6::before, div>h6::after{
     border: 0px black;
 }
 
+/* .caret,
+.caret:focus,
+.caret:active,
+.caret:visited {
+ color: var(--clr-3)
+}
+.dropdown-toggle.caret,
+.dropdown-toggle:active,
+.dropdown-toggle:visited,
+.dropdown-toggle:link,
+.dropdown-toggle:disabled,
+.dropdown-toggle:focus {
+    color: var(--clr-1);
+}
+
+.dropdown-toggle:hover {
+    color: var(--danger-clr);
+} */
+
 /*Formik*/
 .label-text {
     background-color: var(--body-clr);
@@ -454,7 +484,9 @@ div>h6::before, div>h6::after{
     margin: 1px 5px 5px;
 }
 
-.form-control, .form-control:active, .form-control:focus {
+.form-control,
+.form-control:active,
+.form-control:focus {
     background-color: var(--dark-clr);
     color: var(--info-clr);
     font-weight: var(--fw--normbr)
@@ -466,8 +498,8 @@ div>h6::before, div>h6::after{
 }
 
 .formgroup {
-    background-color: var(--body-clr); 
-    color: var(--info-clr)  
+    background-color: var(--body-clr);
+    color: var(--info-clr)
 }
 
 /*Contact Form error message Formik*/
@@ -483,9 +515,11 @@ div>h6::before, div>h6::after{
 
 
 /*carousel*/
-.carousel-control, .carousel-indicators {
+.carousel-control,
+.carousel-indicators {
     color: var(--clr-1);
 }
+
 .carousel-control {
     color: var(--info-clr);
     background-color: var(--body-clr);
@@ -562,7 +596,7 @@ div>h6::before, div>h6::after{
     border-radius: 35px;
 }
 
-.siteref-header{
+.siteref-header {
     color: var(--danger-almost);
     background-color: var(--body-clr);
     padding: 15px;
@@ -583,17 +617,18 @@ div>h6::before, div>h6::after{
     font-weight: var(--fw--bright-wow);
     text-decoration: var(--text-dec-std);
 }
+
 /*Load and Error messaging*/
 
 .load-style {
-    color:var(--info-clr);
+    color: var(--info-clr);
     padding: 2px;
     font-size: 24px;
     font-family: Papyrus;
 }
 
 .error-style {
-    color:var(--info-clr);
+    color: var(--info-clr);
     padding: 2px;
     font-size: 40px;
     font-family: Papyrus;
@@ -607,6 +642,9 @@ div>h6::before, div>h6::after{
     font-family: papyrus;
 }
 
-#spin, .spin-style + .fa-spin {
+#spin,
+.spin-style+.fa-spin {
     color: var(--danger-clr);
-};
+}
+
+;

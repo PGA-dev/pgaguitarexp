@@ -68,7 +68,7 @@ const ContactForm = () => {
                 </Col>
             </FormGroup>
             <FormGroup row  className="formgroup">
-                <Label style={{backgroundColor: '#111115'}} className="label-text" htmlFor='lastName' md='3'>
+                <Label  className="label-text" htmlFor='lastName' md='3'>
                     Last Name
                 </Label>
                 <Col md='12'>
