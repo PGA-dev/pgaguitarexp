@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { monUrl } from '../../sitemisc/monUrl';
+import { baseUrl } from '../../sitemisc/baseUrl';
 
 export const fetchContact = createAsyncThunk(
   'contact/fetchContact',
@@ -20,7 +21,7 @@ export const postContact = createAsyncThunk(
   'contact/postContact',
   async (contact, { dispatch }) => {
     try {
-      const response = await fetch(monUrl + 'contact', {
+      const response = await fetch(baseUrl + 'contact', {
         method: 'POST',
         body: JSON.stringify(contact),
         headers: { 'Content-Type': 'application/json' }
