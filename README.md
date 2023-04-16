@@ -133,7 +133,9 @@ One of the most interesting questions I get asked as a guitar instructor is: "wh
 - add express
 - add mongoose
     - models
-- Updated About and About Guide pages
+- Build Admin page
+- finish login
+- Wire Authentication to login
 ## Market Survey & Research
 
 While current websites by manufacturers give specifications on each guitar model, often you must look to a maintenance spec sheet, retail outlet marketing, and potentially online reviews...who many times must contact the company for their info...in order to get detailed, and accurate, information on a particular instrument. Most consumers rely on a single point of contact with the company, often provided by a retail outlet; this can be useful, but not often fully relevant, detailed, or understandable.
