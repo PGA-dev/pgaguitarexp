@@ -14,15 +14,17 @@
 
 ### **JSON Server:**
 #### https://github.com/PGA-dev/guitarJSON
-## Final Updates
-- site photos: https://github.com/PGA-dev/guitarImage
-- Added blur effect borders to the cards -- was very much inspired by Kevin Powell's version of the same effect
-- updated CSS to work cleanly with dark dropdowns and dark contact form; updated the font color to aqua on these too
-- These CSS updates were a cool way to learn more about animation and learn more about the @keyframes and @property CSS variable rules
+
 
 
 ## Portfolio Project Perspectives
-One of the most interesting questions I get asked as a guitar instructor is: "what paramaters are relevant to buying a guitar?" The answer, like most issues in life, varies with the needs of the student, or musician asking the question. While most beginner players don't really need a lot of information to get them started, potentially realizing that too much overkill on specifics might end up killing their "enjoyable" new hobby, they do often need solid technical data to inform them and educate them to make future musical decisions and purchases. Advanced, or pro-level players, often need a great deal more information on each instrument, and a way of comparing relevant brands and models for their particular musical needs. For these reasons I have decided to attempt a guide site to all guitar related buying. 
+One of the most interesting questions I get asked as a guitar instructor is: "what paramaters are relevant to buying a guitar?" The answer, like most issues in life, varies with the needs of the student, or musician asking the question. While most beginner players don't really need a lot of information to get them started, potentially realizing that too much overkill on specifics might end up killing their "enjoyable" new hobby, they do often need solid technical data to inform them and educate them to make future musical decisions and purchases. Advanced, or pro-level players, often need a great deal more information on each instrument, and a way of comparing relevant brands and models for their particular musical needs. For these reasons I decided to create a guide site to all guitar related buying.
+
+The React project was an attempt to integrate the React Async Redux approach that we learned in the two React courses. The original thought was to keep the architecture fairly similar, as an attempt to master the approach used in class, but much of the adaptation required a bit of modification, especially on the JSX component side. Redux was difficult to adapt to, despite it being fairly well covered in class, but once in place it gave a simple understanding of how the state could be managed without too much of a hodge - podge, multi-faceted approach. The original project uses a JSON server for its data, locally hosting all of the images off of the local public folder on that server. The CSS on the site was a bit difficult as the overall design was a bit out of scope for NuCamp; I had originally envisioned the layout to be one of a neon sign. Using a few CSS courses, some React Spring material, and a bunch of Kevin Powell resources, I found it fairly manageable to create a site that popped out graphically.
+
+When approaching the backend for the project I decided to go against my best intentions and use a Mongo DB, with an express server to run the show. My original idea was to incorporate a SQL backend, but time permitting, I was not able to pursue the route; it is fairly likely that I will attempt this at a future juncture. Early on in the server development I realized that the new server wasn't talking to the front end, and found that I had a CORS, or Cross Origin Resource Sharing problem. As this CORS issue was framed in class, 2 weeks after I first encountered it (oh would I have loved to have had sccess to week 4 material at this time), multiple sources on a site need to have some whitelist handling, especially on the DELETE and PUT requests. I also found the the original React project looked a bit like a black and blue dungeon, so I incorporated even more CSS and updated some card borders and made some title blocks to illuminate things a bit -- see the blur card effect. 
+
+Overall, for a full stack attempt this turned out fairly well I think, but left a great deal of room for improvement. My postman usage is working full stack, for  links, contact and the front carousel, but the full integration to the front is still only working with GET requests; most of the front end for my full stack material, such as site admin login and edit page, are not yet finished, so aren't available even though the server is ready. The main guitar guide content hosting endpoints on the express server are also only half done as the routing will go quite a few layers deep ('http://localhost:3004/guitar/guitarId/guitarstats/guitarstats2/...etc...'), and faces a myriad of nested javascript callback hell issues. Despite these setbacks, I found the project engaging and challenging, really forcing me to tackle challenges not faced in class. I hope to publish the site on my Netlify account and keep developing the content for actual use by musicians!
 
 ## Prospective Features for Website Users
 - Links to major manufactuers
@@ -124,6 +126,8 @@ One of the most interesting questions I get asked as a guitar instructor is: "wh
 - Express
     - Used to mirror endpoints highlighted by front end Fetch system
 - Mongoose middleware for modeling
+- CORS
+- Pasport (not finished but started)
 - HTTP middleware?
 
 
@@ -138,6 +142,16 @@ One of the most interesting questions I get asked as a guitar instructor is: "wh
 - Build Admin page
 - finish login
 - Wire Authentication to login
+
+
+## Final Site Updates
+- site photos: https://github.com/PGA-dev/guitarImage
+- Added blur effect borders to the cards -- was very much inspired by Kevin Powell's version of the same effect
+- updated CSS to work cleanly with dark dropdowns and dark contact form; updated the font color to aqua on these too
+- These CSS updates were a cool way to learn more about animation and learn more about the @keyframes and @property CSS variable rules
+- passport installed, not fully implemented
+- Cors finished
+- Links router finished and fully operational
 ## Market Survey & Research
 
 While current websites by manufacturers give specifications on each guitar model, often you must look to a maintenance spec sheet, retail outlet marketing, and potentially online reviews...who many times must contact the company for their info...in order to get detailed, and accurate, information on a particular instrument. Most consumers rely on a single point of contact with the company, often provided by a retail outlet; this can be useful, but not often fully relevant, detailed, or understandable.
