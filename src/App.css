@@ -1,5 +1,8 @@
 :root {
-    /*Custom sheet -- colors are simplified for my bootstrap addicted friends*/
+    /*CUSTOM PROPERTIES*/
+
+    /*COLORS*/
+    /* -- colors are simplified for my bootstrap addicted friends*/
     --info-clr: aqua;
     --secondary-clr: grey;
     --danger-clr: magenta;
@@ -14,7 +17,7 @@
     --border-clr: #20678b;
     --border-2nd-clr: #3498c2;
 
-    /* Custom colors for gradient color-chase cards -- these might change on and off, or more likely, the main colors in site might change, so must be done separately*/
+    /* CUSTOM COLORS FOR GRADIENT CHASE CARDS */
     --clr-1: aqua;
     --clr-2: magenta;
     --clr-3: #a424ff;
@@ -22,10 +25,12 @@
     --clr-5: slateblue;
     --clr-6: aqua;
 
+    /*BORDER*/
     --border-std: 5px solid #20678b;
     --text-dec-std: none;
     --text-dec-line: underline;
-
+    
+    /*FONT*/
     --font-main: papyrus;
     --font-sec: arial-bold;
 
