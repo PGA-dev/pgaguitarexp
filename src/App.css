@@ -29,16 +29,18 @@
     --border-std: 5px solid #20678b;
     --text-dec-std: none;
     --text-dec-line: underline;
-    
-    /*FONT*/
+
+    /*FONTS*/
     --font-main: papyrus;
     --font-sec: arial-bold;
-
+    
+    /*FONT BRIGHTNESS*/
     --fw-norm: 300;
     --fw--normbr: 500;
     --fw--bright: 700;
     --fw--bright-wow: 900;
 
+    /*FONT SIZE*/
     --fs--heading: 65px;
     --fs--subhead: 45px;
     --fs--pagehead: 40px;
