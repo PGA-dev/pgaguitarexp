@@ -8,7 +8,7 @@ export const fetchLinks = createAsyncThunk(
         try {
             const response = await fetch(monUrl + 'links');
             if (!response.ok) {
-                throw new Error('Unable to fetch, status: ' + response.status + response.url);
+                throw new Error('Fetch response not OK, status: ' + response.status + response.url);
             }
             return await response.json();
         } catch (error) {
