@@ -6,6 +6,7 @@ export const fetchContact = createAsyncThunk(
   'contact/fetchContact',
   async () => {
     try {
+      /*using mongo for basic db fetch */
       const response = await fetch(monUrl + 'contact');
       if (!response.ok) {
         throw new Error('Unable to fetch, status: ' + response.status);
