@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
 
     //keep padding, margins, fontFamily and fontWeights in for posible mod later
-
+    //standard trad DOM style usage of mouse properties
     // const footstyleLink = {
     //     color: "aqua",
     //     fontSize: "24px",
