@@ -8,11 +8,11 @@ export const fetchLinks = createAsyncThunk(
         try {
             const response = await fetch(monUrl + 'links');
             if (!response.ok) {
-                throw new Error('Fetch response not OK, status: ' + response.status + response.url);
+                throw new Error('Fetch response failed, status: ' + response.status + response.url);
             }
             return await response.json();
         } catch (error) {
-            return Promise.reject('Data Fetch failed: ' + error.message);
+            return Promise.reject('Data Fetch General failure: ' + error.message);
         }
     }
 );
